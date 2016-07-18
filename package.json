@@ -7,7 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --include-path scss ./project/assets/src/style/style.scss ./project/assets/dest/style/style.css",
     "build-js": "browserify -t babelify ./project/assets/src/script/app.jsx -o ./project/assets/dest/script/bundle.js",
-    "build": "sudo npm run build-css && sudo npm run build-js"
+    "build": "npm run build-css && npm run build-js",
+    "watch-css": "watch 'npm run build-css' ./project/assets/src/style/",
+    "watch-js": "watchify -v -t babelify ./project/assets/src/script/app.jsx -o ./project/assets/dest/script/bundle.js",
+    "watch": "sudo npm run watch-css && sudo npm run watch-js"
   },
   "repository": {
     "type": "git",
@@ -30,7 +33,9 @@
     "nodemon": "^1.9.2",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
-    "reactify": "^1.1.1"
+    "reactify": "^1.1.1",
+    "watch": "^0.19.1",
+    "watchify": "^3.7.0"
   },
   "browserify": {
     "transform": [
