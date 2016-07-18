@@ -6,8 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --include-path scss ./project/assets/src/style/style.scss ./project/assets/dest/style/style.css",
-    "build-js": "babel ./project/assets/src/script -d ./project/assets/dest/script",
-    "build-brws": "browserify ./project/assets/dest/script/app.js -o ./project/assets/dest/script/bundle.js"
+    "build-js": "browserify -t babelify ./project/assets/src/script/app.jsx -o ./project/assets/dest/script/bundle.js"
   },
   "repository": {
     "type": "git",
@@ -21,9 +20,25 @@
   "homepage": "https://github.com/seito2014/react-sterter#readme",
   "devDependencies": {
     "babel-cli": "^6.10.1",
+    "babel-preset-react": "^6.11.1",
+    "babelify": "^7.3.0",
     "browserify": "^13.0.1",
     "jquery": "^3.1.0",
+    "jsx": "^0.9.89",
     "node-sass": "^3.8.0",
-    "nodemon": "^1.9.2"
+    "nodemon": "^1.9.2",
+    "react": "^15.2.1",
+    "react-dom": "^15.2.1",
+    "reactify": "^1.1.1"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "reactify",
+        {
+          "es6": true
+        }
+      ]
+    ]
   }
 }
