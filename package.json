@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --include-path scss ./project/assets/src/style/style.scss ./project/assets/dest/style/style.css",
-    "build-js": "browserify -t babelify ./project/assets/src/script/app.jsx -o ./project/assets/dest/script/bundle.js"
+    "build-js": "browserify -t babelify ./project/assets/src/script/app.jsx -o ./project/assets/dest/script/bundle.js",
+    "build": "sudo npm run build-css && sudo npm run build-js"
   },
   "repository": {
     "type": "git",
