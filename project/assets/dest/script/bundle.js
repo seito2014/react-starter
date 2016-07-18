@@ -9,14 +9,95 @@ var _smoothScroll = require('./module/_smooth-scroll.jsx');
 
 var _smoothScroll2 = _interopRequireDefault(_smoothScroll);
 
+var _button = require('./module/_button.jsx');
+
+var _button2 = _interopRequireDefault(_button);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _hack2.default)();
 
 (0, _smoothScroll2.default)();
 
+(0, _button2.default)();
 
-},{"./module/_hack.jsx":2,"./module/_smooth-scroll.jsx":3}],2:[function(require,module,exports){
+
+},{"./module/_button.jsx":2,"./module/_hack.jsx":3,"./module/_smooth-scroll.jsx":4}],2:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+exports.default = button;
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+function button() {
+
+    'use strict';
+
+    // class SampleComponent extends React.Component {
+    //   render() {
+    //     return (
+    //       <div>
+    //         This article is written by leader22
+    //       </div>
+    //     );
+    //   }
+    // }
+
+    // const $sample = document.getElementById('js-sample');
+
+    // ReactDOM.render(<Button text="button" onClick="{this.setClass}" />, $sample);
+
+    var Button = function (_React$Component) {
+        _inherits(Button, _React$Component);
+
+        function Button(pops) {
+            _classCallCheck(this, Button);
+
+            var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Button).call(this, pops));
+
+            _this.setClass();
+            return _this;
+        }
+
+        _createClass(Button, [{
+            key: 'setClass',
+            value: function setClass() {
+                this.className += ' is-active';
+            }
+        }, {
+            key: 'render',
+            value: function render() {
+                var text = this.props.text;
+
+
+                return React.createElement(
+                    'button',
+                    { className: 'button' },
+                    text
+                );
+            }
+        }]);
+
+        return Button;
+    }(React.Component);
+
+    var $sample = document.getElementById('js-sample');
+
+    ReactDOM.render(React.createElement(Button, { text: 'button', onClick: '{this.setClass}' }), $sample);
+}
+
+
+},{}],3:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -52,7 +133,7 @@ function hack() {
 }
 
 
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {

@@ -2,27 +2,27 @@ export default function button() {
 
     'use strict';
 
-    // class Button extends React.Component {
-    //     constructor(pops){
-    //         super(pops);
+    class Button extends React.Component {
+        constructor(pops){
+            super(pops);
 
-    //         this.setClass();
-    //     }
+            this.setClass();
+        }
 
-    //     setClass() {
-    //         this.className += ' is-active';
-    //     }
+        setClass() {
+            this.className += ' is-active';
+        }
 
-    //     render() {
-    //         const {text} = this.props;
+        render() {
+            const {text} = this.props;
 
-    //         return (
-    //             <button className="button">{text}</button>
-    //         );
-    //     }
-    // }
+            return (
+                <button className="button">{text}</button>
+            );
+        }
+    }
 
-    // const $sample = document.getElementById('js-sample');
+    const $sample = document.getElementById('js-sample');
 
-    // ReactDOM.render(<Button text="button" onClick="{this.setClass}" />, $sample);
+    ReactDOM.render(<Button text="button" onClick="{this.setClass}" />, $sample);
 }
