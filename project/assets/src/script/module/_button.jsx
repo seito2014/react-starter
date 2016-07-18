@@ -1,23 +1,28 @@
-class SampleComponent extends React.Component {
-    constructor(pops){
-        super(pops);
+export default function button() {
 
-        this.setClass();
-    }
+    'use strict';
 
-    setClass() {
-        this.className += ' is-active';
-    }
+    // class Button extends React.Component {
+    //     constructor(pops){
+    //         super(pops);
 
-    render() {
-        const {text} = this.props;
+    //         this.setClass();
+    //     }
 
-        return (
-            <button className="button">{text}</button>
-        );
-    }
+    //     setClass() {
+    //         this.className += ' is-active';
+    //     }
+
+    //     render() {
+    //         const {text} = this.props;
+
+    //         return (
+    //             <button className="button">{text}</button>
+    //         );
+    //     }
+    // }
+
+    // const $sample = document.getElementById('js-sample');
+
+    // ReactDOM.render(<Button text="button" onClick="{this.setClass}" />, $sample);
 }
-
-const $sample = document.getElementById('js-sample');
-
-ReactDOM.render(<SampleComponent text="button" onClick="{this.setClass}" />, $sample);

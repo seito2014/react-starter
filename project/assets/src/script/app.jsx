@@ -4,5 +4,5 @@ hack();
 import smoothScroll from './module/_smooth-scroll.jsx';
 smoothScroll();
 
-import sampleComponent from './module/_button.jsx';
-sampleComponent();
+import button from './module/_button.jsx';
+button();
