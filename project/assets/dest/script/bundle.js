@@ -43,38 +43,16 @@ function button() {
 
     'use strict';
 
-    // class SampleComponent extends React.Component {
-    //   render() {
-    //     return (
-    //       <div>
-    //         This article is written by leader22
-    //       </div>
-    //     );
-    //   }
-    // }
-
-    // const $sample = document.getElementById('js-sample');
-
-    // ReactDOM.render(<Button text="button" onClick="{this.setClass}" />, $sample);
-
     var Button = function (_React$Component) {
         _inherits(Button, _React$Component);
 
         function Button(pops) {
             _classCallCheck(this, Button);
 
-            var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Button).call(this, pops));
-
-            _this.setClass();
-            return _this;
+            return _possibleConstructorReturn(this, Object.getPrototypeOf(Button).call(this, pops));
         }
 
         _createClass(Button, [{
-            key: 'setClass',
-            value: function setClass() {
-                this.className += ' is-active';
-            }
-        }, {
             key: 'render',
             value: function render() {
                 var text = this.props.text;
@@ -93,7 +71,7 @@ function button() {
 
     var $sample = document.getElementById('js-sample');
 
-    ReactDOM.render(React.createElement(Button, { text: 'button', onClick: '{this.setClass}' }), $sample);
+    ReactDOM.render(React.createElement(Button, { text: 'button' }), $sample);
 }
 
 
