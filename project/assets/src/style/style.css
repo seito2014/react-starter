@@ -1,0 +1,826 @@
+@charset "UTF-8";
+/*
+* 1-setting
+*/
+/*
+#Variables color
+
+@color-default #333
+@color-base #f7f7f7
+@color-border #ccc
+
+@color-main #825794
+@color-sub #ffbb4d
+@color-caution #e74c3c
+
+@color-facebook #305097
+@color-twitter #00aced
+@color-line #00c300
+@color-instagram #325C86
+*/
+/*
+* Variables except color
+*/
+/*
+* Variables font
+*/
+/*
+* 2-mixin
+*/
+/*
+* 3-base
+*/
+body {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  line-height: 1;
+  word-break: break-all; }
+
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input,
+textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  font-style: normal;
+  vertical-align: baseline;
+  background: transparent; }
+
+img {
+  vertical-align: bottom; }
+
+main,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section,
+div,
+address,
+iframe,
+canvas,
+hr,
+textarea {
+  display: block; }
+
+iframe {
+  max-width: 100% !important; }
+
+img,
+embed,
+object,
+video {
+  max-width: 100%; }
+
+a,
+label {
+  cursor: pointer; }
+
+blockquote {
+  padding: 0;
+  margin: 0;
+  display: block; }
+
+address,
+em {
+  font-style: normal; }
+
+hr {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+ul,
+ol,
+li {
+  list-style: none; }
+
+textarea {
+  resize: vertical;
+  overflow: hidden;
+  -webkit-appearance: none;
+  border: 0; }
+
+input,
+button,
+select {
+  vertical-align: middle;
+  border-radius: 0;
+  border: 0;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-appearance: none; }
+
+table {
+  border-collapse: collapse; }
+
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  line-height: 1; }
+
+* {
+  box-sizing: border-box; }
+
+br {
+  font-size: 0; }
+
+::selection {
+  background: #ccc;
+  color: #fff; }
+
+html {
+  font-size: 62.5%;
+  min-height: 100%;
+  /*
+    width: 100%;
+	*/ }
+
+body {
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  background: #fff;
+  color: #333;
+  width: 100%;
+  letter-spacing: 0.02em; }
+
+input,
+button,
+select,
+textarea {
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; }
+
+input:focus,
+button:focus,
+select:focus,
+textarea:focus,
+a:focus,
+div:focus,
+aside:focus {
+  outline: none; }
+
+a {
+  color: #19d68d;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+.for-no-js,
+.for-old {
+  text-align: center;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  height: 40px;
+  line-height: 40px;
+  z-index: 11; }
+
+.for-old {
+  display: none; }
+  .lt-ie9 .for-old {
+    display: block; }
+
+/*
+* 4-layout
+*/
+/*
+l-container
+*/
+.l-container {
+  width: 1140px;
+  padding: 0 30px;
+  margin: 0 auto;
+  position: relative; }
+
+/*
+l-footer
+*/
+.l-footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  font-size: 10px; }
+  .l-footer.l-footer-mt {
+    margin-top: 50px; }
+  .l-footer.l-footer-mt-sm {
+    margin-top: 30px; }
+  .l-footer.l-footer-mt {
+    margin-top: 70px; }
+
+/*
+l-header
+*/
+.l-header {
+  background-color: #fff;
+  padding: 20px;
+  border-bottom: 2px solid #efefef; }
+  .l-header .l-header-left {
+    float: left; }
+  .l-header .l-header-right {
+    float: right;
+    width: 50%; }
+  .l-header.l-header-mb {
+    margin-bottom: 50px; }
+  .l-header.l-header-mb-sm {
+    margin-bottom: 30px; }
+  .l-header.l-header-mb-l {
+    margin-bottom: 70px; }
+
+/*
+l-main
+*/
+.l-main {
+  float: left;
+  width: 760px; }
+
+/*
+l-sidebar
+*/
+.l-sidebar {
+  float: right;
+  width: 300px; }
+  .l-sidebar .l-sidebar-item {
+    margin-bottom: 20px; }
+    .l-sidebar .l-sidebar-item:last-child {
+      margin-bottom: 0; }
+
+/*
+#overview
+l-grid
+*/
+/*
+#styleguide
+l-grid
+style comment.
+
+```
+<div class="l-grid">
+	<ul class="l-grid-inner">
+		<li class="l-grid-item">
+			<img src="http://placekitten.com/200/200" alt="">
+		</li>
+		<li class="l-grid-item">
+			<img src="http://placekitten.com/200/200" alt="">
+		</li>
+		<li class="l-grid-item">
+			<img src="http://placekitten.com/200/200" alt="">
+		</li>
+	</ul>
+</div>
+
+<div class="l-grid l-grid-col3">
+	<ul class="l-grid-inner">
+		<li class="l-grid-item">
+			<img src="http://placekitten.com/200/200" alt="">
+		</li>
+		<li class="l-grid-item">
+			<img src="http://placekitten.com/200/200" alt="">
+		</li>
+		<li class="l-grid-item">
+			<img src="http://placekitten.com/200/200" alt="">
+		</li>
+	</ul>
+</div>
+
+<div class="l-grid l-grid-col6 l-grid-lg-col4 l-grid-md-col3 l-grid-sm-col2">
+	<ul class="l-grid-inner">
+		<li class="l-grid-item">
+			<img src="http://placekitten.com/200/200" alt="">
+		</li>
+		<li class="l-grid-item">
+			<img src="http://placekitten.com/200/200" alt="">
+		</li>
+		<li class="l-grid-item">
+			<img src="http://placekitten.com/200/200" alt="">
+		</li>
+		<li class="l-grid-item">
+			<img src="http://placekitten.com/200/200" alt="">
+		</li>
+		<li class="l-grid-item">
+			<img src="http://placekitten.com/200/200" alt="">
+		</li>
+		<li class="l-grid-item">
+			<img src="http://placekitten.com/200/200" alt="">
+		</li>
+	</ul>
+</div>
+```
+*/
+.l-grid {
+  text-align: center;
+  /* Break point large */
+  /* Break point medium */
+  /* Break point small */ }
+  .l-grid .l-grid-inner {
+    font-size: 0;
+    letter-spacing: 0; }
+  .l-grid .l-grid-item {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px; }
+  .l-grid.l-grid-col2 .l-grid-item {
+    width: 50%; }
+    .android .l-grid.l-grid-col2 .l-grid-item {
+      width: 49.99999%; }
+  .l-grid.l-grid-col3 .l-grid-item {
+    width: 33.3333%; }
+  .l-grid.l-grid-col4 .l-grid-item {
+    width: 25%; }
+    .android .l-grid.l-grid-col4 .l-grid-item {
+      width: 24.99999%; }
+  .l-grid.l-grid-col5 .l-grid-item {
+    width: 20%; }
+    .android .l-grid.l-grid-col5 .l-grid-item {
+      width: 19.99999%; }
+  .l-grid.l-grid-col6 .l-grid-item {
+    width: 16.6666%; }
+  @media all and (max-width: 1024px) {
+    .l-grid.l-grid-lg-col1 .l-grid-item {
+      width: 100%; }
+    .l-grid.l-grid-lg-col2 .l-grid-item {
+      width: 50%; }
+      .android .l-grid.l-grid-lg-col2 .l-grid-item {
+        width: 49.99999%; }
+    .l-grid.l-grid-lg-col3 .l-grid-item {
+      width: 33.3333%; }
+    .l-grid.l-grid-lg-col4 .l-grid-item {
+      width: 25%; }
+      .android .l-grid.l-grid-lg-col4 .l-grid-item {
+        width: 24.99999%; }
+    .l-grid.l-grid-lg-col5 .l-grid-item {
+      width: 20%; }
+      .android .l-grid.l-grid-lg-col5 .l-grid-item {
+        width: 19.99999%; }
+    .l-grid.l-grid-lg-col6 .l-grid-item {
+      width: 16.6666%; } }
+  @media all and (max-width: 780px) {
+    .l-grid.l-grid-md-col1 .l-grid-item {
+      width: 100%; }
+    .l-grid.l-grid-md-col2 .l-grid-item {
+      width: 50%; }
+      .android .l-grid.l-grid-md-col2 .l-grid-item {
+        width: 49.99999%; }
+    .l-grid.l-grid-md-col3 .l-grid-item {
+      width: 33.3333%; }
+    .l-grid.l-grid-md-col4 .l-grid-item {
+      width: 25%; }
+      .android .l-grid.l-grid-md-col4 .l-grid-item {
+        width: 24.99999%; }
+    .l-grid.l-grid-md-col5 .l-grid-item {
+      width: 20%; }
+      .android .l-grid.l-grid-md-col5 .l-grid-item {
+        width: 19.99999%; }
+    .l-grid.l-grid-md-col6 .l-grid-item {
+      width: 16.6666%; } }
+  @media all and (max-width: 480px) {
+    .l-grid.l-grid-sm-col1 .l-grid-item {
+      width: 100%; }
+    .l-grid.l-grid-sm-col2 .l-grid-item {
+      width: 50%; }
+      .android .l-grid.l-grid-sm-col2 .l-grid-item {
+        width: 49.99999%; }
+    .l-grid.l-grid-sm-col3 .l-grid-item {
+      width: 33.3333%; }
+    .l-grid.l-grid-sm-col4 .l-grid-item {
+      width: 25%; }
+      .android .l-grid.l-grid-sm-col4 .l-grid-item {
+        width: 24.99999%; }
+    .l-grid.l-grid-sm-col5 .l-grid-item {
+      width: 20%; }
+      .android .l-grid.l-grid-sm-col5 .l-grid-item {
+        width: 19.99999%; }
+    .l-grid.l-grid-sm-col6 .l-grid-item {
+      width: 16.6666%; } }
+
+/*
+#overview
+l-shelf
+*/
+.l-shelf .l-shelf-list > li {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #efefef;
+  margin-bottom: 20px; }
+  .l-shelf .l-shelf-list > li:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+    margin-bottom: 0; }
+
+.l-shelf .l-shelf-button {
+  margin-top: 40px;
+  text-align: center; }
+
+.l-shelf.l-shelf-mb {
+  margin-bottom: 40px; }
+
+.l-shelf.l-shelf-mb-sm {
+  margin-bottom: 30px; }
+
+.l-shelf.l-shelf-mb-l {
+  margin-bottom: 50px; }
+
+/*
+* 5-module
+*/
+/*
+#overview
+logo
+*/
+/*
+#styleguide
+logo
+```
+<a class="logo" href="./">
+    <img src="../../pc/images/logo.png" width="253" height="52" alt="LIG inc."/>
+</a>
+```
+*/
+.logo {
+  display: block; }
+
+/*
+#overview
+media
+*/
+/*
+#styleguide
+media
+style comment.
+```
+<article class="media">
+    <a class="media-link u-clear" href="">
+        <div class="media-thumbnail">
+            <img src="http://placekitten.com/200/120" height="120" width="200" alt="">
+        </div>
+        <div class="media-body">
+            <time class="media-date" datetime="yyyy-mm-ddT00:00+09:00">
+                <i class="media-icon icon icon-clock"></i>mm/dd
+            </time>
+            <h1 class="media-heading">Title</h1>
+            <p class="media-description">Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text...</p>
+        </div>
+    </a>
+</article>
+```
+*/
+.media .media-link {
+  display: bslock;
+  color: #333; }
+  .media .media-link:hover {
+    text-decoration: none; }
+    .media .media-link:hover .media-thumbnail > img {
+      transform: scale(1.2); }
+
+.media .media-thumbnail {
+  float: left;
+  overflow: hidden; }
+  .media .media-thumbnail > img {
+    transition: transform 0.25s ease-in-out; }
+
+.media .media-body {
+  position: relative;
+  margin-left: 220px; }
+
+.media .media-heading {
+  padding-right: 70px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 12px; }
+
+.media .media-date {
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+.media .media-icon {
+  position: relative;
+  top: 1px;
+  margin-right: 5px; }
+
+.media .media-description {
+  font-size: 18px; }
+
+/*
+#overview
+sns
+*/
+/*
+#styleguide
+sns
+```
+<div class="sns l-grid">
+    <ul class="sns-list l-grid-inner">
+
+        <li class="sns-item l-grid-item">
+            <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="box_count" data-action="like" data-show-faces="false" data-share="false"></div>
+        </li>
+
+        <li class="sns-item l-grid-item">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-via="LIG_J" data-lang="ja" data-size="large" data-count="vertical">ツイート</a>
+        </li>
+
+        <li class="sns-item l-grid-item">
+            <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="vertical-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+        </li>
+
+        <li class="sns-item l-grid-item">
+            <a data-pocket-label="pocket" data-pocket-count="vertical" class="pocket-btn" data-lang="en"></a><script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+        </li>
+
+        <li class="sns-item l-grid-item">
+            <span><script type="text/javascript" src="//media.line.me/js/line-button.js?v=20140411" ></script><script type="text/javascript">new media_line_me.LineButton({"pc":false,"lang":"ja","type":"e"});</script></span>
+        </li>
+
+    </ul>
+</div>
+```
+*/
+.sns .sns-inner {
+  margin: -5px; }
+
+.sns .sns-item {
+  vertical-align: bottom;
+  padding: 5px; }
+
+/*
+#overview
+nav
+*/
+/*
+#styleguide
+nav
+```
+<nav class="nav">
+    <div class="nav-inner l-grid l-grid-col4">
+        <ul class="nav-list l-grid-inner">
+
+            <li class="nav-item l-grid-item">
+                <a class="nav-link nav-link-current" href="#">
+                    home
+                </a>
+            </li>
+
+            <li class="nav-item l-grid-item">
+                <a class="nav-link" href="#">
+                    About
+                </a>
+            </li>
+
+            <li class="nav-item l-grid-item">
+                <a class="nav-link" href="#">
+                    Service
+                </a>
+            </li>
+
+            <li class="nav-item l-grid-item">
+                <a class="nav-link" href="#">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+```
+*/
+.nav {
+  padding: 8px 0; }
+  .nav .nav-list {
+    margin: 0 -10px; }
+  .nav .nav-item {
+    padding: 0 10px; }
+  .nav .nav-link {
+    display: block;
+    padding: 10px;
+    background-color: #efefef;
+    text-align: center;
+    color: #999; }
+    .nav .nav-link:hover {
+      text-decoration: none;
+      color: #fff; }
+
+/*
+#overview
+button
+*/
+/*
+#styleguide
+button
+style comment.
+```
+<a class="button" href="">
+    <span class="button-text">Button more</span>
+</a>
+```
+*/
+.button {
+  display: inline-block;
+  color: #fff;
+  background-color: #19d68d;
+  border-radius: 5px;
+  padding: 10px 35px;
+  box-shadow: 0 5px 0 #0e7b51;
+  transition-property: box-shadow, transform;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in-out; }
+  .button:hover {
+    text-decoration: none;
+    transform: translate3d(0, 5px, 0);
+    box-shadow: 0 0 0 #0e7b51; }
+
+/*
+#overview
+banner
+*/
+/*
+#styleguide
+banner
+```
+<a class="banner" href="">
+    <img src="http://placekitten.com/300/250" height="250" width="300" alt="">
+</a>
+*/
+.banner {
+  display: block; }
+
+/*
+#overview
+social
+*/
+/*
+#styleguide
+social
+```
+<div class="social l-grid l-grid-col2">
+    <ul class="l-grid-inner">
+        <li class="l-grid-item">
+            <a href="">
+                <i class="sprite-sns-2x sprite-sns-facebook"></i>
+            </a>
+        </li>
+        <li class="l-grid-item">
+            <a href="">
+                <i class="sprite-sns-2x sprite-sns-twitter"></i>
+            </a>
+        </li>
+        <li class="l-grid-item">
+            <a href="">
+                <i class="sprite-sns-2x sprite-sns-instagram"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+```
+*/
+.social {
+  text-align: left; }
+
+/*
+#overview
+page-top
+
+comment
+*/
+/*
+#styleguide
+Pagetop
+
+style comment.
+
+```
+<a class="page-top js-scroll" href="#js-body">Top</a>
+```
+*/
+.page-top {
+  display: block;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #19d68d;
+  border-radius: 50%;
+  box-shadow: 0 5px 0 #0e7b51;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  transition-property: box-shadow, transform;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in-out; }
+  .page-top:hover {
+    text-decoration: none;
+    transform: translate3d(0, 5px, 0);
+    box-shadow: 0 0 0 #0e7b51; }
+
+/*
+* 6-utility
+*/
+/*
+Utility
+
+This means helper class like a snippet.
+Utility should always have the prefix "u-".
+And you should not feel free to add a new Utility class.
+*/
+.u-hidden {
+  overflow: hidden;
+  text-indent: 120%;
+  white-space: nowrap; }
+
+.u-clear {
+  zoom: 1; }
+  .u-clear:before, .u-clear:after {
+    content: "";
+    display: block; }
+  .u-clear:after {
+    clear: both; }
+
+.u-elps {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis; }
+
+.u-notap {
+  -webkit-tap-highlight-color: transparent; }

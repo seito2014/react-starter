@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "node-sass --include-path scss ./project/assets/style/style.scss ./project/assets/style/style.css",
-    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+    "build-css": "node-sass --include-path scss ./project/assets/src/style/style.scss ./project/assets/dest/style/style.css",
+    "build-js": "babel ./project/assets/src/script -d ./project/assets/dest/script",
+    "build-brws": "browserify ./project/assets/dest/script/app.js -o ./project/assets/dest/script/bundle.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,9 @@
   },
   "homepage": "https://github.com/seito2014/react-sterter#readme",
   "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "browserify": "^13.0.1",
+    "jquery": "^3.1.0",
     "node-sass": "^3.8.0",
     "nodemon": "^1.9.2"
   }
