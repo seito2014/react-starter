@@ -1,0 +1,22 @@
+{
+  "name": "react-sterter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seito2014/react-sterter.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/seito2014/react-sterter/issues"
+  },
+  "homepage": "https://github.com/seito2014/react-sterter#readme",
+  "devDependencies": {
+    "node-sass": "^3.8.0"
+  }
+}
